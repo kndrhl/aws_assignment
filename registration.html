@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {font-family:  Helvetica, sans-serif;} 
+form {border: 3px solid #f1f1f1;} 
+input {
+  display:block;
+  width:100%;
+  margin:10px 0;
+  border-radius: 5px;
+  padding: 15px;
+  border: none;
+  border-bottom: 2px solid #5e72e4;
+  border-radius: 4px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+button {
+  margin: 10px;
+appearance:none;
+-webkit-appearance:none;
+padding:10px;
+border:none;
+background-color:#3F51B5;
+color:#fff;
+font-weight:600;
+border-radius:5px;
+width:100%;
+}
+.container { 
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+} 
+h2{
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<form action="{{url_for('registration')}}" method="POST" enctype="multipart/form-data">
+  <div class="container">
+    <h2>Register</h2>
+    <div class="mb-3">
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="username" id="username" required>
+    </div>
+    <div class="mb-3">
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" id="password" required>
+    </div>
+    <div class="mb-3">
+    <label><b>First Name</b></label>
+    <input type="text" placeholder="Enter First Name" name="firstname" id="firstname" required>
+    </div>
+    <div class="mb-3">
+    <label><b>Last Name</b></label>
+    <input type="text" placeholder="Enter Last Name" name="lastname" id="lastname" required>
+    </div>
+    <div class="mb-3">
+    <label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
+    </div>
+    <div class="mb-3">
+    <label>Upload File : </label><input type="file" id="textfile" name="textfile"><br><br>
+    <button id="submit" name="submit" type="submit">Register</button>
+  </div>
+ 
+  <div>
+    <h3>Click here to <a href="{{url_for('login')}}">Log in</a></h3>
+  </div>
+</form>
+
+</body>
+</html>

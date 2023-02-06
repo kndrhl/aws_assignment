@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<style> 
+body {font-family:  Helvetica, sans-serif;} 
+form {border: 3px solid #f1f1f1;} 
+input {
+  display:block;
+  width:100%;
+  margin:10px 0;
+  
+  border-radius: 5px;
+
+  padding: 15px;
+  border: none;
+  border-bottom: 2px solid #5e72e4;
+  border-radius: 4px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  outline: none;
+ 
+
+}
+button {
+  margin: 10px;
+appearance:none;
+-webkit-appearance:none;
+padding:10px;
+border:none;
+background-color:#3F51B5;
+color:#fff;
+font-weight:600;
+border-radius:5px;
+width:100%;
+}
+.container { 
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+} 
+h2{
+  text-align: center;
+}
+</style> 
+</head> 
+<body> 
+<h2>Login Page</h2> 
+<form action="{{url_for('login')}}" method="POST" > 
+  <div class="container"> 
+    <div class="mb-3">
+    <label><b>Username</b></label> 
+    <input type="text" placeholder="Enter Username" name="username"id="username" required> 
+    </div>
+    <div class="mb-3">
+<label><b>Password</b></label> 
+    <input type="password" id="password" name="password" placeholder="Enter Password" name="psw" required> 
+    <button type="submit" name="submit" id="submit">Login</button> 
+    <div class="mb-3">
+  </div>
+  <div class="container"> 
+    <h3>Click <a href="{{url_for('registration')}}">here</a> to sign up</h3> 
+  </div> 
+</form> 
+</body> 
+</html>
